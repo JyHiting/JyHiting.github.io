@@ -323,7 +323,7 @@
                 
               
 
-              <time title="创建时间：2018-05-18 15:40:07" itemprop="dateCreated datePublished" datetime="2018-05-18T15:40:07+08:00">2018-05-18</time>
+              <time title="创建时间：2018-05-18 16:42:04" itemprop="dateCreated datePublished" datetime="2018-05-18T16:42:04+08:00">2018-05-18</time>
             
 
             
@@ -375,7 +375,26 @@ modal.toast({
     message: &apos;This is a toast&apos;,
     duration: 1000
 })
-</code></pre><h4 id="emsp-emsp-同样的一个界面先看下正常时候的UI层级："><a href="#emsp-emsp-同样的一个界面先看下正常时候的UI层级：" class="headerlink" title="&emsp;&emsp;同样的一个界面先看下正常时候的UI层级："></a>&emsp;&emsp;同样的一个界面先看下正常时候的UI层级：</h4><p><img src="weex_iOS_learn_issue_imgs/1.png" alt="图片"></p>
+</code></pre><h4 id="emsp-emsp-同样的一个界面先看下正常时候的UI层级，红色箭头指向的地方就是toast展示的地方："><a href="#emsp-emsp-同样的一个界面先看下正常时候的UI层级，红色箭头指向的地方就是toast展示的地方：" class="headerlink" title="&emsp;&emsp;同样的一个界面先看下正常时候的UI层级，红色箭头指向的地方就是toast展示的地方："></a>&emsp;&emsp;同样的一个界面先看下正常时候的UI层级，红色箭头指向的地方就是toast展示的地方：</h4><p><img src="https://github.com/JyHiting/JyHiting.github.io/blob/master/weex_iOS_learn_issue_imgs/1.png" alt=""></p>
+<h4 id="emsp-emsp-接着看不正常的时候的UI层级，红圈圈出的位置没有出现本应该出现的toast："><a href="#emsp-emsp-接着看不正常的时候的UI层级，红圈圈出的位置没有出现本应该出现的toast：" class="headerlink" title="&emsp;&emsp;接着看不正常的时候的UI层级，红圈圈出的位置没有出现本应该出现的toast："></a>&emsp;&emsp;接着看不正常的时候的UI层级，红圈圈出的位置没有出现本应该出现的toast：</h4><p><img src="https://github.com/JyHiting/JyHiting.github.io/blob/master/weex_iOS_learn_issue_imgs/2.png" alt=""></p>
+<blockquote>
+<p>查原因</p>
+</blockquote>
+<h4 id="emsp-emsp-网上查资料好像没有，只能跟源码，找到sdk中的WXModalUIModule-m，toast是一个试图，我要看下这个试图的父试图是哪位，我想给其父试图设置颜色查看这个父试图的真实面目，我找到如下位置："><a href="#emsp-emsp-网上查资料好像没有，只能跟源码，找到sdk中的WXModalUIModule-m，toast是一个试图，我要看下这个试图的父试图是哪位，我想给其父试图设置颜色查看这个父试图的真实面目，我找到如下位置：" class="headerlink" title="&emsp;&emsp;网上查资料好像没有，只能跟源码，找到sdk中的WXModalUIModule.m，toast是一个试图，我要看下这个试图的父试图是哪位，我想给其父试图设置颜色查看这个父试图的真实面目，我找到如下位置："></a>&emsp;&emsp;网上查资料好像没有，只能跟源码，找到sdk中的WXModalUIModule.m，toast是一个试图，我要看下这个试图的父试图是哪位，我想给其父试图设置颜色查看这个父试图的真实面目，我找到如下位置：</h4><pre><code>WXAssertMainThread();
+UIView *superView =  [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+if (!superView) {
+    superView =  self.weexInstance.rootView;
+}
+</code></pre><h4 id="emsp-emsp-找到了这个superView，给它来个红色背景："><a href="#emsp-emsp-找到了这个superView，给它来个红色背景：" class="headerlink" title="&emsp;&emsp;找到了这个superView，给它来个红色背景："></a>&emsp;&emsp;找到了这个superView，给它来个红色背景：</h4><pre><code>WXAssertMainThread();
+UIView *superView =  [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+if (!superView) {
+    superView =  self.weexInstance.rootView;
+}
+superView.backgroundColor = [UIColor redColor];
+</code></pre><h4 id="emsp-emsp-看正常时候的UI层级图，红色superView出现（其实是废话，正常当然出现了，不正常的时候难道就不出现，没有吗）："><a href="#emsp-emsp-看正常时候的UI层级图，红色superView出现（其实是废话，正常当然出现了，不正常的时候难道就不出现，没有吗）：" class="headerlink" title="&emsp;&emsp;看正常时候的UI层级图，红色superView出现（其实是废话，正常当然出现了，不正常的时候难道就不出现，没有吗）："></a>&emsp;&emsp;看正常时候的UI层级图，红色superView出现（其实是废话，正常当然出现了，不正常的时候难道就不出现，没有吗）：</h4><p><img src="https://github.com/JyHiting/JyHiting.github.io/blob/master/weex_iOS_learn_issue_imgs/3.png" alt=""></p>
+<h4 id="emsp-emsp-不正常的时候我就不贴图了，是看不到红色的superView的。"><a href="#emsp-emsp-不正常的时候我就不贴图了，是看不到红色的superView的。" class="headerlink" title="&emsp;&emsp;不正常的时候我就不贴图了，是看不到红色的superView的。"></a>&emsp;&emsp;不正常的时候我就不贴图了，是看不到红色的superView的。</h4><blockquote>
+<p>toast所在的superView不见了？</p>
+</blockquote>
 
           
         
