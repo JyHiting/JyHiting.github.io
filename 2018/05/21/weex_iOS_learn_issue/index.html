@@ -108,20 +108,30 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="修心是一辈子的事">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="环境配置  WeexSDK版本：0.18.0Xcode版本：9.3 遇到了什么问题？  &amp;emsp;&amp;emsp;项目中要使用Weex就着手想把Weex官网上的示例用法自己建个新工程跑一跑看看效果，走到内置的modal组件的时候发现在我新建的iOS工程中运行的时候该出现toast的时候不出现，但是在安卓上正常，官方给的demo工程中运行正常。 检查自己写的代码  &amp;emsp;&amp;emsp;Weex代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weex在iOS平台上官方Toast偶尔不显示问题">
+<meta property="og:url" content="http://yoursite.com/2018/05/21/weex_iOS_learn_issue/index.html">
 <meta property="og:site_name" content="修心是一辈子的事">
+<meta property="og:description" content="环境配置  WeexSDK版本：0.18.0Xcode版本：9.3 遇到了什么问题？  &amp;emsp;&amp;emsp;项目中要使用Weex就着手想把Weex官网上的示例用法自己建个新工程跑一跑看看效果，走到内置的modal组件的时候发现在我新建的iOS工程中运行的时候该出现toast的时候不出现，但是在安卓上正常，官方给的demo工程中运行正常。 检查自己写的代码  &amp;emsp;&amp;emsp;Weex代">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jy-hiting-blogs.oss-cn-beijing.aliyuncs.com/18-5-21/5458845.jpg">
+<meta property="og:image" content="http://jy-hiting-blogs.oss-cn-beijing.aliyuncs.com/18-5-21/36664164.jpg">
+<meta property="og:image" content="http://jy-hiting-blogs.oss-cn-beijing.aliyuncs.com/18-5-21/97305592.jpg">
+<meta property="og:image" content="http://jy-hiting-blogs.oss-cn-beijing.aliyuncs.com/18-5-21/93627915.jpg">
+<meta property="og:image" content="http://jy-hiting-blogs.oss-cn-beijing.aliyuncs.com/18-5-21/73704383.jpg">
+<meta property="og:updated_time" content="2018-05-21T03:34:15.312Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="修心是一辈子的事">
+<meta name="twitter:title" content="Weex在iOS平台上官方Toast偶尔不显示问题">
+<meta name="twitter:description" content="环境配置  WeexSDK版本：0.18.0Xcode版本：9.3 遇到了什么问题？  &amp;emsp;&amp;emsp;项目中要使用Weex就着手想把Weex官网上的示例用法自己建个新工程跑一跑看看效果，走到内置的modal组件的时候发现在我新建的iOS工程中运行的时候该出现toast的时候不出现，但是在安卓上正常，官方给的demo工程中运行正常。 检查自己写的代码  &amp;emsp;&amp;emsp;Weex代">
+<meta name="twitter:image" content="http://jy-hiting-blogs.oss-cn-beijing.aliyuncs.com/18-5-21/5458845.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/21/weex_iOS_learn_issue/"/>
 
 
 
@@ -131,7 +141,7 @@
   };
 </script>
 
-  <title>修心是一辈子的事</title>
+  <title>Weex在iOS平台上官方Toast偶尔不显示问题 | 修心是一辈子的事</title>
   
 
 
@@ -178,8 +188,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +225,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
@@ -260,9 +269,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -294,11 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/21/weex_iOS_learn_issue/" itemprop="url">
-                  Weex在iOS平台上官方Toast偶尔不显示问题
-                </a>
+          <h1 class="post-title" itemprop="name headline">Weex在iOS平台上官方Toast偶尔不显示问题
               
             
           </h1>
@@ -357,9 +362,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>环境配置</p>
 </blockquote>
 <h5 id="WeexSDK版本：0-18-0"><a href="#WeexSDK版本：0-18-0" class="headerlink" title="WeexSDK版本：0.18.0"></a>WeexSDK版本：0.18.0</h5><h5 id="Xcode版本：9-3"><a href="#Xcode版本：9-3" class="headerlink" title="Xcode版本：9.3"></a>Xcode版本：9.3</h5><blockquote>
@@ -435,8 +438,6 @@ return YES;
 <p>后记</p>
 </blockquote>
 <h4 id="emsp-emsp-阿里的工程师把下标为0的window作为toast的superView而不是keyWindow，不是太理解。问题虽然很低级但是追问题的过程还是让我收获不少的。"><a href="#emsp-emsp-阿里的工程师把下标为0的window作为toast的superView而不是keyWindow，不是太理解。问题虽然很低级但是追问题的过程还是让我收获不少的。" class="headerlink" title="&emsp;&emsp;阿里的工程师把下标为0的window作为toast的superView而不是keyWindow，不是太理解。问题虽然很低级但是追问题的过程还是让我收获不少的。"></a>&emsp;&emsp;阿里的工程师把下标为0的window作为toast的superView而不是keyWindow，不是太理解。问题虽然很低级但是追问题的过程还是让我收获不少的。</h4>
-          
-        
       
     </div>
 
@@ -456,12 +457,12 @@ return YES;
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -471,14 +472,19 @@ return YES;
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -499,8 +505,17 @@ return YES;
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -545,6 +560,22 @@ return YES;
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#WeexSDK版本：0-18-0"><span class="nav-number">1.</span> <span class="nav-text">WeexSDK版本：0.18.0</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Xcode版本：9-3"><span class="nav-number">2.</span> <span class="nav-text">Xcode版本：9.3</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#emsp-emsp-项目中要使用Weex就着手想把Weex官网上的示例用法自己建个新工程跑一跑看看效果，走到内置的modal组件的时候发现在我新建的iOS工程中运行的时候该出现toast的时候不出现，但是在安卓上正常，官方给的demo工程中运行正常。"><span class="nav-number">3.</span> <span class="nav-text">  项目中要使用Weex就着手想把Weex官网上的示例用法自己建个新工程跑一跑看看效果，走到内置的modal组件的时候发现在我新建的iOS工程中运行的时候该出现toast的时候不出现，但是在安卓上正常，官方给的demo工程中运行正常。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#emsp-emsp-Weex代码是复制的官方示例"><span class="nav-number">4.</span> <span class="nav-text">  Weex代码是复制的官方示例:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-既然js代码最终都转化为了iOS、安卓平台本地的代码，那么我检查iOS的视图层吧，看看到底有没有我的toast-UI，于是我这么做了把toast的时间增大到1000："><span class="nav-number"></span> <span class="nav-text">  既然js代码最终都转化为了iOS、安卓平台本地的代码，那么我检查iOS的视图层吧，看看到底有没有我的toast UI，于是我这么做了把toast的时间增大到1000：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-同样的一个界面先看下正常时候的UI层级，红色箭头指向的地方就是toast展示的地方："><span class="nav-number"></span> <span class="nav-text">  同样的一个界面先看下正常时候的UI层级，红色箭头指向的地方就是toast展示的地方：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-接着看不正常的时候的UI层级，红圈圈出的位置没有出现本应该出现的toast："><span class="nav-number"></span> <span class="nav-text">  接着看不正常的时候的UI层级，红圈圈出的位置没有出现本应该出现的toast：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-网上查资料好像没有，只能跟源码，找到sdk中的WXModalUIModule-m，我要看下这个视图的父视图是哪位，我想给其父视图设置颜色查看这个父视图的真实面目，我找到如下位置："><span class="nav-number"></span> <span class="nav-text">  网上查资料好像没有，只能跟源码，找到sdk中的WXModalUIModule.m，我要看下这个视图的父视图是哪位，我想给其父视图设置颜色查看这个父视图的真实面目，我找到如下位置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-找到了这个superView，给它来个红色背景："><span class="nav-number"></span> <span class="nav-text">  找到了这个superView，给它来个红色背景：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-看正常时候的UI层级图，红色superView出现（其实是废话，正常当然出现了，不正常的时候难道就不出现，没有吗）："><span class="nav-number"></span> <span class="nav-text">  看正常时候的UI层级图，红色superView出现（其实是废话，正常当然出现了，不正常的时候难道就不出现，没有吗）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-不正常的时候我就不贴图了，是看不到红色的superView的。"><span class="nav-number"></span> <span class="nav-text">  不正常的时候我就不贴图了，是看不到红色的superView的。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-这个superView到底是什么？继续看源码："><span class="nav-number"></span> <span class="nav-text">  这个superView到底是什么？继续看源码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-是一个window，window当然也是一个view，源码中取的下标为0的window作为superView，而出现问题的时候我给superView添加了一个红色背景，检查视图层级没看到此红色superView，果真丢了？我要把所有此时的window都打印出来看看："><span class="nav-number"></span> <span class="nav-text">  是一个window，window当然也是一个view，源码中取的下标为0的window作为superView，而出现问题的时候我给superView添加了一个红色背景，检查视图层级没看到此红色superView，果真丢了？我要把所有此时的window都打印出来看看：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-执行如下语句："><span class="nav-number"></span> <span class="nav-text">  执行如下语句：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-正常的情况下结果如下："><span class="nav-number"></span> <span class="nav-text">  正常的情况下结果如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-不正常的情况下结果如下："><span class="nav-number"></span> <span class="nav-text">  不正常的情况下结果如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-虽然此时我还不知道toast不出现的具体原因，但是我此时兴奋的是二者结果有差异，这是好现象，继续追查差异性的东西，不正常的时候打印的结果多了一个window，其中在结果下标为0的那个window的hidden属性为yes，yes？那么我刚才设置了背景色就是给这货设置的，因为它为hidden所以看不到？"><span class="nav-number"></span> <span class="nav-text">  虽然此时我还不知道toast不出现的具体原因，但是我此时兴奋的是二者结果有差异，这是好现象，继续追查差异性的东西，不正常的时候打印的结果多了一个window，其中在结果下标为0的那个window的hidden属性为yes，yes？那么我刚才设置了背景色就是给这货设置的，因为它为hidden所以看不到？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-先不要关闭不正常的时候运行的iOS程序，我们尝试下运行时给这个下标为0的window设置hidden-NO，执行如下代码："><span class="nav-number"></span> <span class="nav-text">  先不要关闭不正常的时候运行的iOS程序，我们尝试下运行时给这个下标为0的window设置hidden = NO，执行如下代码：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-执行完上面的debug代码之后，再查看UI层级发现toast出现了，toast的superView也出现了，红色背景也看到了，这说明出现问题的时候该存在的视图还是存在的只不过hidden了，看不到。"><span class="nav-number"></span> <span class="nav-text">  执行完上面的debug代码之后，再查看UI层级发现toast出现了，toast的superView也出现了，红色背景也看到了，这说明出现问题的时候该存在的视图还是存在的只不过hidden了，看不到。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-其实这个问题倒是很好说的，我们新建iOS工程的时候会有一个默认的东西看图："><span class="nav-number"></span> <span class="nav-text">  其实这个问题倒是很好说的，我们新建iOS工程的时候会有一个默认的东西看图：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-也会有一个默认的配置看图："><span class="nav-number"></span> <span class="nav-text">  也会有一个默认的配置看图：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-当然往往我们可能会在AppDelegate中自己初始化根vc，类似这样："><span class="nav-number"></span> <span class="nav-text">  当然往往我们可能会在AppDelegate中自己初始化根vc，类似这样：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-之后可能就是顺其自然的编码该干啥干啥。如果这样，一般情况下不会有问题，二般情况下就是现在的情况下就会有问题，我们自己初始化了window之后如果不把系统开始默认加载的那个Main-storyboard从配置中移除掉那么系统默认的window还是存在的只不过展示了我们自己初始化的window，隐藏了开始默认的window。当然聪明的你会习惯性的移除Main-storyboard的配置也就不会出现类似的问题了。"><span class="nav-number"></span> <span class="nav-text">  之后可能就是顺其自然的编码该干啥干啥。如果这样，一般情况下不会有问题，二般情况下就是现在的情况下就会有问题，我们自己初始化了window之后如果不把系统开始默认加载的那个Main.storyboard从配置中移除掉那么系统默认的window还是存在的只不过展示了我们自己初始化的window，隐藏了开始默认的window。当然聪明的你会习惯性的移除Main.storyboard的配置也就不会出现类似的问题了。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#emsp-emsp-阿里的工程师把下标为0的window作为toast的superView而不是keyWindow，不是太理解。问题虽然很低级但是追问题的过程还是让我收获不少的。"><span class="nav-number"></span> <span class="nav-text">  阿里的工程师把下标为0的window作为toast的superView而不是keyWindow，不是太理解。问题虽然很低级但是追问题的过程还是让我收获不少的。</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -679,6 +710,10 @@ return YES;
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
 
   
 
